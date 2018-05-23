@@ -7,7 +7,7 @@ const post = {
     template: `
     <section>
       <div ng-show="$ctrl.myPosts[0]" ng-repeat="item in $ctrl.myPosts">
-       <p>{{ item.postTitle }}</p>
+       <h4>{{ item.postTitle }}</h4>
        <p>{{ item.content }}</p>
        </div>
       <p ng-hide="$ctrl.myPosts[0]"> {{ $ctrl.warning }}</p>

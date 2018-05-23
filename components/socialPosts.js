@@ -4,31 +4,21 @@ const socialPosts = {
     template: `
     <div>
         <h1>My thoughts</h1>
-        
-        <div>
-            <button>New Thought</button>
-        </div>
-        <postForm add-post="$ctrl.addPost(newPost);"></postForm>
-        <post my-posts="$ctrl.myPosts"></post>
+        <post-form add-post="$ctrl.addPost(newPost);"></post-form>
+        <section>
+            <post my-posts="$ctrl.myPosts"></post>
+        </section>
     </div>
     `,
-    controller: function ($element) {
+    controller: function () {
         const vm = this;
-        vm.myPosts = [
-            {
-                postTitle: "Dog",
-                content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam dolorum consequuntur, fugiat consequatur atque veniam neque corporis recusandae aspernatur animi dolorem nam eaque saepe reprehenderit libero quae necessitatibus error ipsum."
-            },
-            {
-                postTitle: "Cat",
-                content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam dolorum consequuntur, fugiat consequatur atque veniam neque corporis recusandae aspernatur animi dolorem nam eaque saepe reprehenderit libero quae necessitatibus error ipsum."
-            }
-        ];
+        vm.myPosts = [];
         vm.addPost = (newPost) => {
             vm.myPosts.push({
               postTitle: newPost.postTitle,
               content: newPost.content
             });
+            
         };
     }
 };
