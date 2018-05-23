@@ -9,9 +9,9 @@ const postForm = {
         <p ng-click="$ctrl.closeForm();">X</p>
         <h3>New Posts</h3>
         <label>Title</label>
-        <input type="text" placeholder="Post Title.." ng-model="$ctrl.newPost.postTitle">
+        <input expand-on-focus type="text" placeholder="Post Title.." ng-model="$ctrl.newPost.postTitle">
         <label>Thought</label>
-        <textarea placeholder="What are you thinking about?.." ng-model="$ctrl.newPost.content" cols="30" rows="10"></textarea>
+        <textarea expand-on-focus placeholder="What are you thinking about?.." ng-model="$ctrl.newPost.content" cols="30" rows="10"></textarea>
         <button>Add Post</button>
     </form>
     `,
